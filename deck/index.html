@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Second Brain — Building AI for Your Practice</title>
+
+  <link rel="stylesheet" href="reveal/dist/reveal.css">
+  <link rel="stylesheet" href="reveal/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="reveal/plugin/highlight/monokai.css">
+
+  <style>
+    :root {
+      --accent: #c9a227;      /* brass / legal gold */
+      --ink: #f2f2f0;
+      --muted: #b9b9b3;
+      --live: #4caf7d;
+      --clip: #d9a441;
+    }
+    .reveal { font-family: Georgia, "Times New Roman", serif; color: var(--ink); }
+    .reveal .slides section { text-align: left; }
+    .reveal h1, .reveal h2, .reveal h3 { font-family: "Helvetica Neue", Arial, sans-serif; letter-spacing: -0.01em; }
+    .reveal h1 { color: var(--ink); }
+    .reveal .accent { color: var(--accent); }
+    .reveal .center { text-align: center; }
+    .reveal .muted { color: var(--muted); }
+    .reveal em.lead { color: var(--accent); font-style: normal; }
+
+    /* tool + mode pills */
+    .pill { display:inline-block; font-family:"Helvetica Neue",Arial,sans-serif; font-size:0.5em;
+            padding:0.25em 0.7em; border-radius:999px; margin:0.2em 0.3em 0.2em 0; vertical-align:middle; }
+    .tool { background:#2a2a2a; border:1px solid #555; color:#ddd; }
+    .live { background:rgba(76,175,125,0.18); border:1px solid var(--live); color:#9be3c0; }
+    .clip { background:rgba(217,164,65,0.18); border:1px solid var(--clip); color:#f0d28a; }
+
+    .beatnum { font-family:"Helvetica Neue",Arial,sans-serif; font-size:0.5em; color:var(--accent);
+               letter-spacing:0.18em; text-transform:uppercase; }
+    .reveal .demo-placeholder { border:2px dashed #555; border-radius:10px; padding:0.8em 1em; color:var(--muted);
+                                font-family:"Helvetica Neue",Arial,sans-serif; font-size:0.6em; margin-top:0.4em; }
+    .reveal ul { margin-left: 1em; }
+    .reveal .fineprint { font-size:0.4em; color:var(--muted); font-family:"Helvetica Neue",Arial,sans-serif; }
+    .reveal .big { font-size:1.3em; line-height:1.2; }
+    .reveal a { color: var(--accent); }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1. TITLE (Beat 0) -->
+    <section data-background-color="#101216">
+      <h1 class="accent">A Second Brain</h1>
+      <h3>Building AI for Your Practice</h3>
+      <p class="muted">Criminal Defense Attorneys of Michigan &middot; 2026</p>
+      <aside class="notes">Cold open. See script Beat 0. Hook first, title second.</aside>
+    </section>
+
+    <!-- 2. THESIS (Beat 0) -->
+    <section data-background-color="#101216">
+      <p class="beatnum">The whole talk in one line</p>
+      <h2 class="big">Not a search engine.<br><em class="lead">A thinking partner.</em></h2>
+      <p class="muted">Stop using AI like Google. Start using it like a sharp associate who never sleeps.</p>
+      <aside class="notes">Script Beat 0. This is the spine; everything ladders up to it.</aside>
+    </section>
+
+    <!-- 3. CONFIDENTIALITY (Beat 0.5) -->
+    <section data-background-color="#14110a">
+      <p class="beatnum">First, the elephant</p>
+      <h2>I'm not here to debate <span class="muted">ethics.</span></h2>
+      <h3 class="accent">I am here about privilege.</h3>
+      <p class="big" style="margin-top:0.4em;">Cloud for abstract thinking.<br><em class="lead">Local for raw privileged material.</em></p>
+      <p class="fineprint">Bar &amp; grill (food-primary) = lawful CPL carry. And yes — you can run a serious model offline. More in a minute.</p>
+      <aside class="notes">Script Beat 0.5. Defuse the objection. Tease the local-model clip coming in Beat 3.</aside>
+    </section>
+
+    <!-- 4. THE CASE -->
+    <section data-background-color="#101216">
+      <p class="beatnum">One case, all the way through</p>
+      <h2>People v. <span class="accent">Daniel Reyes</span></h2>
+      <ul>
+        <li>Self-defense shooting at <em>Ramona's Sane Bar &amp; Grill</em></li>
+        <li>Two witnesses who <em>don't agree</em></li>
+        <li>A dispute that turns on <em>distance, movement, and sightlines</em></li>
+      </ul>
+      <p class="fineprint">Entirely fictional. Built to demonstrate the workflow.</p>
+      <aside class="notes">Set the story. We'll deepen it five times.</aside>
+    </section>
+
+    <!-- 5. BEAT 1 — BRAINSTORM -->
+    <section data-background-color="#101216">
+      <p class="beatnum">Beat 1 &middot; Brainstorm the theory</p>
+      <h2>What are my <span class="accent">defense theories?</span></h2>
+      <span class="pill tool">ChatGPT</span><span class="pill live">LIVE DEMO</span>
+      <ul>
+        <li>Self-defense &middot; imperfect self-defense &middot; reasonable doubt on intent</li>
+        <li>The AI argues <em>against</em> me, too</li>
+      </ul>
+      <div class="demo-placeholder">[ DEMO ] Paste sanitized facts &rarr; ask for competing theories + the weakness in each. See run-sheet.</div>
+      <aside class="notes">Script Beat 1. Sanitized facts only — no client data in the cloud. Fallback: assets/beat1-brainstorm.mp4</aside>
+    </section>
+
+    <!-- 6. BEAT 2 — STRATEGY -->
+    <section data-background-color="#101216">
+      <p class="beatnum">Beat 2 &middot; Build &amp; stress-test strategy</p>
+      <h2>Point it at the <span class="accent">whole file.</span></h2>
+      <span class="pill tool">Claude Code</span><span class="pill live">LIVE DEMO</span>
+      <ul>
+        <li>Reads every document in the case folder at once</li>
+        <li>Drafts an investigation plan + motion list</li>
+        <li>Then plays <em>prosecutor</em> against my theory</li>
+      </ul>
+      <div class="demo-placeholder">[ DEMO ] Run Claude Code on the <code>case-file/</code> folder. See run-sheet for the exact prompt.</div>
+      <aside class="notes">Script Beat 2. This is the "tireless associate" beat. Fallback: assets/beat2-strategy.mp4</aside>
+    </section>
+
+    <!-- 7. BEAT 3 — INCONSISTENCIES (LOCAL) -->
+    <section data-background-color="#14110a">
+      <p class="beatnum">Beat 3 &middot; Spot the inconsistencies</p>
+      <h2>What did the witness <span class="accent">not see?</span></h2>
+      <span class="pill tool">Local model &middot; airplane mode</span><span class="pill clip">CLIP</span>
+      <ul>
+        <li>Raw witness statements go in — and <em>nothing leaves the laptop</em></li>
+        <li>It finds the column in the sightline, the dead light, the clock</li>
+      </ul>
+      <div class="demo-placeholder">[ CLIP ] assets/beat3-local-inconsistencies.mp4 — narrate the airplane-mode toggle.</div>
+      <aside class="notes">Script Beat 3. This is the privacy payoff: privileged docs, fully offline. RTX 4090.</aside>
+    </section>
+
+    <!-- 8. BEAT 4 — CROSS-EXAM -->
+    <section data-background-color="#101216">
+      <p class="beatnum">Beat 4 &middot; Rehearse the cross</p>
+      <h2>Cross-examine the <span class="accent">officer.</span></h2>
+      <span class="pill tool">Gemini (on my phone)</span><span class="pill live">LIVE DEMO</span>
+      <ul>
+        <li>The AI <em>becomes</em> Det. Salas</li>
+        <li>I practice the cross — it pushes back like a real witness</li>
+      </ul>
+      <div class="demo-placeholder">[ DEMO ] Phone on screen-mirror. Role-play the investigating officer. See run-sheet.</div>
+      <aside class="notes">Script Beat 4. Pull out the phone — "this is on the device in your pocket." Fallback: assets/beat4-crossexam.mp4</aside>
+    </section>
+
+    <!-- 9. BEAT 5 — 3D SCENE -->
+    <section data-background-color="#0c0e12">
+      <p class="beatnum">Beat 5 &middot; Reconstruct the scene</p>
+      <h2>Could the witness <span class="accent">even see it?</span></h2>
+      <span class="pill tool">3D Gaussian splat</span><span class="pill clip">CLIP</span>
+      <ul>
+        <li>Walk the room in 3D from <em>Corey's</em> seat</li>
+        <li>The support column lands right in his line of sight</li>
+      </ul>
+      <div class="demo-placeholder">[ CLIP ] assets/beat5-3d-splat.mp4 — end on the obstructed sightline.</div>
+      <aside class="notes">Script Beat 5. The climax: the splat becomes an argument, not a diorama.</aside>
+    </section>
+
+    <!-- 10. BEAT 6 — CLOSE -->
+    <section data-background-color="#14110a">
+      <p class="beatnum">Beat 6 &middot; Close</p>
+      <h2>I'm a lawyer, <span class="accent">not a programmer.</span></h2>
+      <p>I built that 3D pipeline by <em>directing</em> AI.</p>
+      <p class="muted">Claude isn't the only one — ChatGPT's <strong>Codex</strong> and Google's <strong>Antigravity</strong> do the same things. Pick what fits you.</p>
+      <p class="big accent" style="margin-top:0.3em;">Monday: take one real task and give it to your second brain.</p>
+      <aside class="notes">Script Beat 6. Land the empowerment beat + the single Monday action.</aside>
+    </section>
+
+    <!-- 11. THANK YOU / REPO -->
+    <section data-background-color="#101216" class="center">
+      <h2 class="accent">Thank you.</h2>
+      <p>Everything you just saw — slides, case file, prompts:</p>
+      <p class="big"><a href="https://github.com/michnaugh1/cdam-2026-second-brain">github.com/michnaugh1/cdam-2026-second-brain</a></p>
+      <p class="fineprint">All case materials are fictional.</p>
+      <aside class="notes">Q&amp;A. Repo is your leave-behind.</aside>
+    </section>
+
+  </div>
+</div>
+
+<script src="reveal/dist/reveal.js"></script>
+<script src="reveal/plugin/notes/notes.js"></script>
+<script src="reveal/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    transition: 'fade',
+    plugins: [ RevealNotes, RevealHighlight ]
+  });
+</script>
+</body>
+</html>
