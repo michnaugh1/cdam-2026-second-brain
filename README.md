@@ -10,27 +10,56 @@ and reconstruct a scene in 3D — all threaded through a single fictional case.
 
 ## What's in here
 
-- **`deck/`** — the slide deck (`reveal.js`, runs offline; just open `deck/index.html`).
-- **`case-file/`** — the fictional "discovery" for *People v. Daniel Reyes*. These are the
-  documents fed to the AI during the demos. **Entirely fictional.** Any resemblance to real
-  people or events is coincidental.
-- **`script/`** — the timed speaker script with demo cues.
-- **`run-sheet/`** — the stage cheat sheet: exact prompts, expected outputs, fallback clips,
-  and timing for each demo.
-- **`docs/`** — the design spec for the talk.
+```
+cdam-2026-second-brain/
+├── deck/            The slide deck (reveal.js, runs offline — open deck/index.html)
+│   ├── index.html
+│   ├── reveal/      Vendored reveal.js (no internet needed)
+│   └── assets/      Drop your recorded clips/screenshots here
+├── case-file/       The fictional "discovery" — fed to the AI during the demos
+│   ├── 01-police-incident-report.md
+│   ├── 02-witness-a-whitfield.md
+│   ├── 03-witness-b-lindqvist.md
+│   ├── 04-defendant-statement-reyes.md
+│   ├── 05-911-transcript.md
+│   ├── 06-scene-evidence-log-floorplan.md
+│   └── 07-me-summary.md
+├── script/
+│   └── speaker-script.md     Timed, spoken script with demo cues
+├── run-sheet/
+│   └── stage-run-sheet.md    Exact prompts, expected output, fallbacks, timing
+└── docs/
+    ├── case-bible.md                                  Canonical facts (authoring source of truth)
+    ├── 2026-06-16-second-brain-presentation-design.md Design spec
+    └── 2026-06-16-second-brain-implementation-plan.md Build plan
+```
 
 ## Running the deck
 
-Open `deck/index.html` in any modern browser. No internet connection required.
+Open `deck/index.html` in any modern browser. No internet connection required. Press
+`S` for the speaker-notes view.
 
 ## The fictional case
 
 *People v. Daniel Reyes* — a self-defense shooting at the fictional **Ramona's Sane Bar &
-Grill**. Built solely to demonstrate AI workflows. Not legal advice; not a real case.
+Grill**. Built solely to demonstrate AI workflows. **Entirely fictional. Not legal advice;
+not a real case.** Any resemblance to real people or events is coincidental.
 
 ## A note on tools
 
 The demos use Claude, ChatGPT, a local model (run offline for privileged material), and
 Gemini. ChatGPT's Codex and Google's Antigravity do similar things — pick what fits you.
-The guiding rule shown in the talk: **cloud for abstract thinking; local for raw privileged
-material.**
+The guiding rule shown in the talk: **cloud for abstract thinking; local for raw
+privileged material.**
+
+## Day-of checklist
+
+- [ ] `deck/index.html` opens **offline** (load it, then kill wifi to confirm).
+- [ ] `case-file/` folder open in a window you can show on screen.
+- [ ] Logged in: ChatGPT (Beat 1), Claude Code in this project (Beat 2), Gemini on phone (Beat 4).
+- [ ] Phone charged + screen-mirroring tested.
+- [ ] Clips present in `deck/assets/`: `beat3-local-inconsistencies.mp4`, `beat5-3d-splat.mp4`,
+      plus fallbacks `beat1-brainstorm.mp4`, `beat2-strategy.mp4`, `beat4-crossexam.mp4`.
+- [ ] Backup of the deck on a USB stick.
+
+Full detail is in `run-sheet/stage-run-sheet.md`.
