@@ -23,7 +23,10 @@ cdam-2026-second-brain/
 │   ├── 04-defendant-statement-reyes.md
 │   ├── 05-911-transcript.md
 │   ├── 06-scene-evidence-log-floorplan.md
-│   └── 07-me-summary.md
+│   ├── 07-me-summary.md
+│   └── pdf/         PDF versions of all seven docs (for on-screen realism)
+├── scripts/
+│   └── build-case-pdfs.sh   Regenerate case-file/pdf/ from the Markdown
 ├── script/
 │   └── speaker-script.md     Timed, spoken script with demo cues
 ├── run-sheet/
@@ -38,6 +41,16 @@ cdam-2026-second-brain/
 
 Open `deck/index.html` in any modern browser. No internet connection required. Press
 `S` for the speaker-notes view.
+
+## Case file: Markdown and PDF
+
+The discovery lives in `case-file/` as Markdown (easiest to drag/paste into the AI) and
+as PDFs in `case-file/pdf/` (looks like real discovery on screen). To regenerate the PDFs
+after editing the Markdown:
+
+```bash
+bash scripts/build-case-pdfs.sh   # requires pandoc + libreoffice
+```
 
 ## The fictional case
 
